@@ -1,0 +1,67 @@
+{
+  "id": "A4_margin_0.8",
+  "base_experiment": "A4_margin_0.8",
+  "group": "A",
+  "method": "DecompROS + OSQP",
+  "type": "corridor_qp",
+  "slide": 8,
+  "suggested": false,
+  "custom": false,
+  "desc": "安全邊距 0.8 m：走廊為空，OSQP 判定不可行",
+  "overrides": {},
+  "params": {
+    "N": 15,
+    "walls": {
+      "bottom": [
+        -1.5,
+        0.3
+      ],
+      "top": [
+        1.8,
+        2.5
+      ],
+      "x_range": [
+        4.0,
+        6.0
+      ],
+      "n_x": 15,
+      "n_bottom": 15,
+      "n_top": 10
+    },
+    "corridor": {
+      "margin": 0.8,
+      "default_bounds": [
+        -2.0,
+        2.0
+      ],
+      "search_half_width": 0.5
+    },
+    "qp": {
+      "w_smooth": 15.0,
+      "w_ref": 1.0,
+      "smooth_p_scale": 1.0
+    },
+    "osqp": {},
+    "plot": {
+      "figsize": [
+        10,
+        5
+      ],
+      "path_alpha": 0.6
+    }
+  },
+  "solver": {
+    "name": "OSQP",
+    "status": "primal infeasible",
+    "iterations": 50,
+    "run_time_ms": 0.109185,
+    "wall_time_ms": 1.326194000284886,
+    "objective": NaN,
+    "n_var": 30,
+    "n_con": 34,
+    "nnz_P": 84,
+    "nnz_A": 34
+  },
+  "metrics": {},
+  "trajectory": null
+}

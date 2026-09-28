@@ -1,0 +1,141 @@
+{
+  "id": "A1_base",
+  "base_experiment": "A1_base",
+  "group": "A",
+  "method": "DecompROS + OSQP",
+  "type": "corridor_qp",
+  "slide": 5,
+  "suggested": false,
+  "custom": false,
+  "desc": "基準：margin 0.2、N 15、w_smooth 15、w_ref 1",
+  "overrides": {},
+  "params": {
+    "N": 15,
+    "walls": {
+      "bottom": [
+        -1.5,
+        0.3
+      ],
+      "top": [
+        1.8,
+        2.5
+      ],
+      "x_range": [
+        4.0,
+        6.0
+      ],
+      "n_x": 15,
+      "n_bottom": 15,
+      "n_top": 10
+    },
+    "corridor": {
+      "margin": 0.2,
+      "default_bounds": [
+        -2.0,
+        2.0
+      ],
+      "search_half_width": 0.5
+    },
+    "qp": {
+      "w_smooth": 15.0,
+      "w_ref": 1.0,
+      "smooth_p_scale": 1.0
+    },
+    "osqp": {},
+    "plot": {
+      "figsize": [
+        10,
+        5
+      ],
+      "path_alpha": 0.6
+    }
+  },
+  "solver": {
+    "name": "OSQP",
+    "status": "solved",
+    "iterations": 50,
+    "run_time_ms": 0.105377,
+    "wall_time_ms": 2.116471001500031,
+    "objective": -515.9111331243932,
+    "n_var": 30,
+    "n_con": 34,
+    "nnz_P": 84,
+    "nnz_A": 34
+  },
+  "metrics": {
+    "path_length_m": 10.074546373096744,
+    "smoothness_sum_d2": 0.028776594696175932,
+    "max_d2_m": 0.10926466432950643,
+    "max_curvature_1pm": 0.210588403439182,
+    "max_heading_change_deg": 8.683619411107298,
+    "min_segment_m": 0.7143194749955333,
+    "max_segment_m": 0.7266723593034403,
+    "mean_dev_from_ref_m": 0.27881525311797817,
+    "max_dev_from_ref_m": 0.5069454238947533,
+    "min_clearance_points_m": 0.2000005596195601,
+    "min_clearance_polyline_m": 0.2000005596195601,
+    "polyline_collision": false
+  },
+  "trajectory": [
+    [
+      0.0,
+      -0.0
+    ],
+    [
+      0.714286,
+      0.06028
+    ],
+    [
+      1.428571,
+      0.139907
+    ],
+    [
+      2.142857,
+      0.250192
+    ],
+    [
+      2.857143,
+      0.38379
+    ],
+    [
+      3.571429,
+      0.5
+    ],
+    [
+      4.285714,
+      0.506945
+    ],
+    [
+      5.0,
+      0.500001
+    ],
+    [
+      5.714286,
+      0.506945
+    ],
+    [
+      6.428571,
+      0.5
+    ],
+    [
+      7.142857,
+      0.38379
+    ],
+    [
+      7.857143,
+      0.250192
+    ],
+    [
+      8.571429,
+      0.139907
+    ],
+    [
+      9.285714,
+      0.06028
+    ],
+    [
+      10.0,
+      -0.0
+    ]
+  ]
+}

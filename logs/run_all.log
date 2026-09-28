@@ -1,0 +1,107 @@
+slide  5 -> A1_base                15 blobs / 15 pts, 12.1 mm/px
+slide  6 -> A2_default_bounds_0.1  15 blobs / 15 pts, 12.1 mm/px
+slide  7 -> A3_margin_0.5          15 blobs / 15 pts, 12.1 mm/px
+slide  8 -> A4_margin_0.8           0 blobs /  0 pts, 12.1 mm/px
+slide  9 -> A5_N30                 30 blobs / 30 pts, 12.1 mm/px
+slide 10 -> A6_w_smooth_150        15 blobs / 15 pts, 12.1 mm/px
+slide 11 -> A7_w_ref_100           15 blobs / 15 pts, 12.1 mm/px
+slide 18 -> B1_base                15 blobs / 15 pts, 15.2 mm/px
+slide 19 -> B2_N30                 28 blobs / 30 pts, 15.2 mm/px
+slide 20 -> B3_d_safe_1.5          13 blobs / 15 pts, 15.2 mm/px
+slide 21 -> B4_w_smooth_50         15 blobs / 15 pts, 15.2 mm/px
+slide 22 -> B5_w_obs_2000          15 blobs / 15 pts, 15.2 mm/px
+slide 23 -> B6_w_ref_100           15 blobs / 15 pts, 15.2 mm/px
+slide 26 -> C1_wide_channel        15 blobs / 15 pts, 12.4 mm/px
+slide 27 -> C2_w_a_5               15 blobs / 15 pts, 12.4 mm/px
+slide 28 -> C3_w_a_0.1             15 blobs / 15 pts, 12.4 mm/px
+slide 29 -> D1_wide_corridor       15 blobs / 15 pts, 9.9 mm/px
+slide 30 -> D2_w_a_5               15 blobs / 15 pts, 9.9 mm/px
+slide 31 -> D3_w_a_0.1             15 blobs / 15 pts, 9.9 mm/px
+寫入 /home/david/Collision_trajectory_planning/reference/slide_reference.json
+18:57:07 INFO config=/home/david/Collision_trajectory_planning/configs/experiments.yaml  overrides=[]  experiments=['A1_base', 'A2_default_bounds_0.1', 'A3_margin_0.5', 'A4_margin_0.8', 'A5_N30', 'A6_w_smooth_150', 'A7_w_ref_100']
+18:57:08 INFO A1_base                      solved                             it=50   len=10.075 m  min_clear=+0.200 m
+18:57:08 INFO A2_default_bounds_0.1        solved                             it=50   len=10.291 m  min_clear=+0.284 m
+18:57:08 INFO A3_margin_0.5                solved                             it=50   len=10.189 m  min_clear=+0.500 m
+18:57:08 INFO A4_margin_0.8                primal infeasible                  it=50  
+18:57:09 INFO A5_N30                       solved                             it=50   len=10.159 m  min_clear=+0.200 m
+18:57:09 INFO A6_w_smooth_150              solved                             it=50   len=10.073 m  min_clear=+0.222 m
+18:57:09 INFO A7_w_ref_100                 solved                             it=100  len=10.242 m  min_clear=+0.199 m
+18:57:09 INFO 完成 7 個實驗，輸出於 /home/david/Collision_trajectory_planning/runs
+18:57:10 INFO config=/home/david/Collision_trajectory_planning/configs/experiments.yaml  overrides=[]  experiments=['B1_base', 'B2_N30', 'B3_d_safe_1.5', 'B4_w_smooth_50', 'B5_w_obs_2000', 'B6_w_ref_100']
+18:57:10 INFO B1_base                      ABNORMAL:                          it=21   len=10.253 m  min_clear=+0.294 m
+18:57:11 INFO B2_N30                       ABNORMAL:                          it=2    len=10.384 m  min_clear=-0.039 m
+18:57:11 INFO B3_d_safe_1.5                ABNORMAL:                          it=7    len=11.496 m  min_clear=+0.200 m
+18:57:11 INFO B4_w_smooth_50               ABNORMAL:                          it=22   len=10.158 m  min_clear=+0.252 m
+18:57:12 INFO B5_w_obs_2000                ABNORMAL:                          it=6    len=10.963 m  min_clear=+0.274 m
+18:57:12 INFO B6_w_ref_100                 ABNORMAL:                          it=5    len=10.192 m  min_clear=-0.007 m
+18:57:12 INFO 完成 6 個實驗，輸出於 /home/david/Collision_trajectory_planning/runs
+18:57:13 INFO config=/home/david/Collision_trajectory_planning/configs/experiments.yaml  overrides=[]  experiments=['C1_wide_channel', 'C2_w_a_5', 'C3_w_a_0.1']
+18:57:14 INFO C1_wide_channel              CONVERGENCE: NORM OF PROJECTED GRA it=0    len=10.000 m  min_clear=+0.800 m  T=13.57 s  v=0.00 0.68 0.85 0.92 0.96 0.98 0.99 0.99 0.99 0.98 0.96 0.92 0.85 0.68 0.00
+18:57:15 INFO C2_w_a_5                     ABNORMAL:                          it=18   len=10.150 m  min_clear=+0.237 m  T=18.34 s  v=0.00 0.64 0.78 0.81 0.74 0.50 0.50 0.50 0.50 0.50 0.74 0.81 0.78 0.64 0.00
+18:57:15 INFO C3_w_a_0.1                   ABNORMAL:                          it=18   len=10.150 m  min_clear=+0.237 m  T=15.16 s  v=0.00 0.98 1.00 1.00 0.98 0.50 0.50 0.50 0.50 0.50 0.98 1.00 1.00 0.98 0.00
+18:57:15 INFO 完成 3 個實驗，輸出於 /home/david/Collision_trajectory_planning/runs
+18:57:16 INFO config=/home/david/Collision_trajectory_planning/configs/experiments.yaml  overrides=[]  experiments=['D1_wide_corridor', 'D2_w_a_5', 'D3_w_a_0.1']
+18:57:17 INFO D1_wide_corridor             solved                             it=50   len=10.000 m  min_clear=+0.500 m  T=13.57 s  v=0.00 0.68 0.85 0.92 0.96 0.98 0.99 0.99 0.99 0.98 0.96 0.92 0.85 0.68 0.00
+18:57:18 INFO D2_w_a_5                     solved                             it=50   len=10.075 m  min_clear=+0.200 m  T=18.12 s  v=0.00 0.65 0.79 0.81 0.74 0.50 0.50 0.50 0.50 0.50 0.74 0.81 0.79 0.65 0.00
+18:57:18 INFO D3_w_a_0.1                   solved                             it=50   len=10.075 m  min_clear=+0.200 m  T=14.97 s  v=0.00 0.98 1.00 1.00 0.98 0.50 0.50 0.50 0.50 0.50 0.98 1.00 1.00 0.98 0.00
+18:57:18 INFO 完成 3 個實驗，輸出於 /home/david/Collision_trajectory_planning/runs
+18:57:20 INFO config=/home/david/Collision_trajectory_planning/configs/experiments.yaml  overrides=[]  experiments=['S1_corridor_w_a_0.1_amax', 'S2_esdf_w_a_0.1_amax', 'S3_bilinear_B1', 'S4_bilinear_B2', 'S5_bilinear_B3', 'S6_bilinear_B4', 'S7_bilinear_B5', 'S8_bilinear_B6', 'S9_decomp_narrow_channel', 'S10_esdf_wide_gap', 'S11_bilinear_B6_w_obs_2000']
+18:57:20 INFO S1_corridor_w_a_0.1_amax     solved                             it=50   len=10.075 m  min_clear=+0.200 m  T=15.53 s  v=0.00 0.85 0.99 1.00 0.98 0.50 0.50 0.50 0.50 0.50 0.98 1.00 0.99 0.85 0.00
+18:57:21 INFO S2_esdf_w_a_0.1_amax         ABNORMAL:                          it=18   len=10.150 m  min_clear=+0.237 m  T=15.77 s  v=0.00 0.83 0.99 1.00 0.98 0.50 0.50 0.50 0.50 0.50 0.98 1.00 0.99 0.83 0.00
+18:57:21 INFO S3_bilinear_B1               CONVERGENCE: RELATIVE REDUCTION OF it=52   len=10.104 m  min_clear=+0.284 m
+18:57:22 INFO S4_bilinear_B2               CONVERGENCE: RELATIVE REDUCTION OF it=26   len=10.528 m  min_clear=+0.275 m
+18:57:22 INFO S5_bilinear_B3               CONVERGENCE: RELATIVE REDUCTION OF it=44   len=10.153 m  min_clear=+0.290 m
+18:57:22 INFO S6_bilinear_B4               CONVERGENCE: RELATIVE REDUCTION OF it=56   len=10.081 m  min_clear=+0.254 m
+18:57:23 INFO S7_bilinear_B5               CONVERGENCE: RELATIVE REDUCTION OF it=63   len=10.109 m  min_clear=+0.285 m
+18:57:23 INFO S8_bilinear_B6               CONVERGENCE: RELATIVE REDUCTION OF it=10   len=10.137 m  min_clear=-0.138 m
+18:57:23 INFO S9_decomp_narrow_channel     solved                             it=50   len=10.075 m  min_clear=+0.200 m
+18:57:24 INFO S10_esdf_wide_gap            ABNORMAL:                          it=13   len=10.204 m  min_clear=+0.397 m
+18:57:24 INFO S11_bilinear_B6_w_obs_2000   CONVERGENCE: RELATIVE REDUCTION OF it=9    len=10.328 m  min_clear=-0.002 m
+18:57:24 INFO 完成 11 個實驗，輸出於 /home/david/Collision_trajectory_planning/runs
+corridor + OSQP QP, N=15                      median   2.006 ms  p95   2.934 ms  it=50
+L-BFGS-B nearest-cell (original), N=15        median  11.546 ms  p95  15.504 ms  it=21
+L-BFGS-B bilinear (suggested), N=15           median  15.030 ms  p95  19.797 ms  it=52
+corridor + OSQP QP, N=30                      median   2.986 ms  p95   4.034 ms  it=50
+L-BFGS-B nearest-cell (original), N=30        median   6.304 ms  p95   7.980 ms  it=2
+L-BFGS-B bilinear (suggested), N=30           median  16.400 ms  p95  21.064 ms  it=26
+ESDF map build 220x80 (one-off)               median   1.752 ms  p95   1.991 ms  it=0
+velocity QP (Phase 2), N=15                   median   1.169 ms  p95   1.524 ms  it=75
+寫入 /home/david/Collision_trajectory_planning/results/benchmark.csv 與 results/figures/benchmark.png
+slide  5 A1_base                max 0.008 m (0.6 px)  mean 0.004 m  labels -
+slide  6 A2_default_bounds_0.1  max 0.007 m (0.6 px)  mean 0.004 m  labels -
+slide  7 A3_margin_0.5          max 0.006 m (0.5 px)  mean 0.004 m  labels -
+slide  8 A4_margin_0.8          max 0.000 m (0.0 px)  mean 0.000 m  labels -
+slide  9 A5_N30                 max 0.008 m (0.7 px)  mean 0.004 m  labels -
+slide 10 A6_w_smooth_150        max 0.007 m (0.6 px)  mean 0.004 m  labels -
+slide 11 A7_w_ref_100           max 0.007 m (0.6 px)  mean 0.005 m  labels -
+slide 18 B1_base                max 0.013 m (0.9 px)  mean 0.007 m  labels -
+slide 19 B2_N30                 max 0.011 m (0.7 px)  mean 0.005 m  labels -
+slide 20 B3_d_safe_1.5          max 0.015 m (1.0 px)  mean 0.006 m  labels -
+slide 21 B4_w_smooth_50         max 0.011 m (0.7 px)  mean 0.006 m  labels -
+slide 22 B5_w_obs_2000          max 0.013 m (0.9 px)  mean 0.006 m  labels -
+slide 23 B6_w_ref_100           max 0.014 m (0.9 px)  mean 0.007 m  labels -
+slide 26 C1_wide_channel        max 0.006 m (0.5 px)  mean 0.004 m  labels 15/15
+slide 27 C2_w_a_5               max 0.010 m (0.8 px)  mean 0.005 m  labels 15/15
+slide 28 C3_w_a_0.1             max 0.010 m (0.8 px)  mean 0.005 m  labels 15/15
+slide 29 D1_wide_corridor       max 0.005 m (0.5 px)  mean 0.003 m  labels 15/15
+slide 30 D2_w_a_5               max 0.006 m (0.6 px)  mean 0.003 m  labels 15/15
+slide 31 D3_w_a_0.1             max 0.006 m (0.6 px)  mean 0.003 m  labels 15/15
+寫入 /home/david/Collision_trajectory_planning/results/reproduction_check.csv、results/figures/reproduction_check.png、results/comparison/
+corridor smooth scale 1.0 [0.0075, 0.0068, 0.0064, 0.0079, 0.0072, 0.0073]
+corridor smooth scale 2.0 [0.0393, 0.065, 0.0639, 0.0558, 0.0102, 0.0358]
+esdf 220x80 floor    unit=True  worst 0.015
+esdf 220x80 floor    unit=False worst 0.557
+esdf 220x80 argmin   unit=True  worst 0.145
+esdf 220x80 argmin   unit=False worst 0.585
+esdf 220x80 bilinear unit=True  worst 0.756
+esdf 220x80 bilinear unit=False worst 0.754
+esdf 221x81 floor    unit=True  worst 0.779
+esdf 221x81 floor    unit=False worst 0.783
+esdf 221x81 argmin   unit=True  worst 0.763
+esdf 221x81 argmin   unit=False worst 0.762
+esdf 221x81 bilinear unit=True  worst 2.117
+esdf 221x81 bilinear unit=False worst 2.116
+C group best: [(0.010008645765885905, 0.6, 50.0, 200.0, 5.0, 30), (0.01660724256420446, 0.6, 100.0, 500.0, 10.0, 30), (0.0166072425642117, 0.6, 20.0, 100.0, 2.0, 30)]
+寫入 /home/david/Collision_trajectory_planning/results/variant_search.md
+30 個實驗 -> results/metrics.csv、results/summary.md、results/figures/
+完成：runs/（各實驗）、results/（彙整與圖）、logs/

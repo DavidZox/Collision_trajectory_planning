@@ -1,0 +1,10 @@
+load average (1 min) = 10.8, CPUs = 16
+corridor + OSQP QP, N=15                      median   2.137 ms  p95   2.850 ms  it=50
+L-BFGS-B nearest-cell (original), N=15        median  11.747 ms  p95  16.940 ms  it=21
+L-BFGS-B bilinear (suggested), N=15           median  16.174 ms  p95  22.022 ms  it=52
+corridor + OSQP QP, N=30                      median   3.177 ms  p95   3.739 ms  it=50
+L-BFGS-B nearest-cell (original), N=30        median   6.613 ms  p95   9.552 ms  it=2
+L-BFGS-B bilinear (suggested), N=30           median  17.535 ms  p95  24.276 ms  it=26
+ESDF map build 220x80 (one-off)               median   2.066 ms  p95   2.492 ms  it=0
+velocity QP (Phase 2), N=15                   median   1.248 ms  p95   1.635 ms  it=75
+寫入 /home/david/Collision_trajectory_planning/results/benchmark.csv 與 results/figures/benchmark.png

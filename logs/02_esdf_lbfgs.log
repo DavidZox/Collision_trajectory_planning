@@ -1,0 +1,8 @@
+18:57:10 INFO config=/home/david/Collision_trajectory_planning/configs/experiments.yaml  overrides=[]  experiments=['B1_base', 'B2_N30', 'B3_d_safe_1.5', 'B4_w_smooth_50', 'B5_w_obs_2000', 'B6_w_ref_100']
+18:57:10 INFO B1_base                      ABNORMAL:                          it=21   len=10.253 m  min_clear=+0.294 m
+18:57:11 INFO B2_N30                       ABNORMAL:                          it=2    len=10.384 m  min_clear=-0.039 m
+18:57:11 INFO B3_d_safe_1.5                ABNORMAL:                          it=7    len=11.496 m  min_clear=+0.200 m
+18:57:11 INFO B4_w_smooth_50               ABNORMAL:                          it=22   len=10.158 m  min_clear=+0.252 m
+18:57:12 INFO B5_w_obs_2000                ABNORMAL:                          it=6    len=10.963 m  min_clear=+0.274 m
+18:57:12 INFO B6_w_ref_100                 ABNORMAL:                          it=5    len=10.192 m  min_clear=-0.007 m
+18:57:12 INFO 完成 6 個實驗，輸出於 /home/david/Collision_trajectory_planning/runs

@@ -1,0 +1,142 @@
+{
+  "id": "S3_bilinear_B1",
+  "base_experiment": "S3_bilinear_B1",
+  "group": "B",
+  "method": "ESDF + L-BFGS",
+  "type": "esdf_lbfgs",
+  "slide": null,
+  "suggested": true,
+  "custom": false,
+  "desc": "B1 改用雙線性 ESDF 查詢",
+  "overrides": {},
+  "params": {
+    "N": 15,
+    "map": {
+      "x_min": -0.5,
+      "x_max": 10.5,
+      "y_min": -1.5,
+      "y_max": 2.5,
+      "resolution": 0.05,
+      "lookup": "bilinear"
+    },
+    "walls": {
+      "x_range": [
+        4.0,
+        6.0
+      ],
+      "channel": [
+        0.3,
+        0.9
+      ]
+    },
+    "ego": {
+      "d_safe": 0.6,
+      "w_smooth": 5.0,
+      "w_obs": 200.0,
+      "w_ref": 0.5
+    },
+    "lbfgs": {},
+    "plot": {
+      "figsize": [
+        10,
+        5
+      ]
+    }
+  },
+  "solver": {
+    "name": "scipy L-BFGS-B",
+    "status": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "converged_normally": true,
+    "iterations": 52,
+    "function_evals": 81,
+    "wall_time_ms": 15.556275997369085,
+    "objective": 11.989368323742191,
+    "J_smooth": 3.0558483907889684,
+    "J_obs": 6.230089849190796,
+    "J_ref": 2.703430083762427,
+    "n_points_inside_d_safe": 3
+  },
+  "esdf_grid": {
+    "nx": 220,
+    "ny": 80,
+    "min": -1.0,
+    "max": 4.509988913511872,
+    "lookup": "bilinear"
+  },
+  "metrics": {
+    "path_length_m": 10.103721467866,
+    "smoothness_sum_d2": 0.6111696781577937,
+    "max_d2_m": 0.4813325507081679,
+    "max_curvature_1pm": 0.11919221789469395,
+    "max_heading_change_deg": 7.258039678422178,
+    "min_segment_m": 0.5312038907001408,
+    "max_segment_m": 1.3401340540039113,
+    "mean_dev_from_ref_m": 0.5110141666970311,
+    "max_dev_from_ref_m": 0.8962205022147459,
+    "min_clearance_points_m": 0.290781776144023,
+    "min_clearance_polyline_m": 0.28362718268199705,
+    "polyline_collision": false
+  },
+  "trajectory": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.562017,
+      0.035119
+    ],
+    [
+      1.106355,
+      0.087917
+    ],
+    [
+      1.630807,
+      0.172342
+    ],
+    [
+      2.165397,
+      0.294108
+    ],
+    [
+      2.79164,
+      0.441748
+    ],
+    [
+      3.660303,
+      0.575
+    ],
+    [
+      5.0,
+      0.609218
+    ],
+    [
+      6.339697,
+      0.575
+    ],
+    [
+      7.20836,
+      0.441748
+    ],
+    [
+      7.834603,
+      0.294108
+    ],
+    [
+      8.369193,
+      0.172342
+    ],
+    [
+      8.893645,
+      0.087917
+    ],
+    [
+      9.437983,
+      0.035119
+    ],
+    [
+      10.0,
+      0.0
+    ]
+  ]
+}

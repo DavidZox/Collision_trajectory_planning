@@ -1,0 +1,2339 @@
+{
+ "source": "避障軌跡規劃.pptx",
+ "note": "軌跡點由圖像自動數位化；速度標籤為人工判讀",
+ "slides": {
+  "5": {
+   "experiment": "A1_base",
+   "group": "A",
+   "image": "reference/slides/slide05.png",
+   "image_size": [
+    991,
+    486
+   ],
+   "m_per_px": 0.01212,
+   "calibration": {
+    "top": 31,
+    "bottom": 436,
+    "left": 73,
+    "right": 980,
+    "ax": 0.012121212121212126,
+    "bx": -1.381818181818185,
+    "ay": -0.009881382901779256,
+    "by": 2.807851873282223
+   },
+   "slide_text": "DecompROS + QSQP 演算法測試結果 (1)\ny_min, y_max = -2.0, 2.0\ny_max = np.min(top_obs[:, 1]) - 0.2\ny_min = np.max(bottom_obs[:, 1]) + 0.2\nN = 15\nw_smooth, w_ref = 15.0, 1.0",
+   "markers": [
+    {
+     "x": 0.0025,
+     "y": 0.0015,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.7152,
+     "y": 0.0608,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.4278,
+     "y": 0.1399,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 2.1458,
+     "y": 0.25,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 2.8606,
+     "y": 0.3869,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 3.5758,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.2909,
+     "y": 0.5055,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.9939,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7091,
+     "y": 0.5055,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.4242,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.1394,
+     "y": 0.3869,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.857,
+     "y": 0.2486,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 8.5697,
+     "y": 0.1399,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.2848,
+     "y": 0.0608,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9975,
+     "y": 0.0015,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15
+  },
+  "6": {
+   "experiment": "A2_default_bounds_0.1",
+   "group": "A",
+   "image": "reference/slides/slide06.png",
+   "image_size": [
+    987,
+    480
+   ],
+   "m_per_px": 0.01212,
+   "calibration": {
+    "top": 27,
+    "bottom": 432,
+    "left": 74,
+    "right": 981,
+    "ax": 0.012121212121212123,
+    "bx": -1.3939393939393938,
+    "ay": -0.009881382901779255,
+    "by": 2.7683263416751047
+   },
+   "slide_text": "DecompROS + QSQP 演算法測試結果 (2)\ny_min, y_max = -0.1, 0.1\ny_max = np.min(top_obs[:, 1]) - 0.2\ny_min = np.max(bottom_obs[:, 1]) + 0.2\nN = 15\nw_smooth, w_ref = 15.0, 1.0",
+   "markers": [
+    {
+     "x": 0.0025,
+     "y": 0.0015,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.7176,
+     "y": -0.0676,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 1.4303,
+     "y": -0.0973,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.1458,
+     "y": -0.0662,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 2.8581,
+     "y": 0.1004,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 3.5758,
+     "y": 0.4956,
+     "area_px": 69,
+     "n_est": 1
+    },
+    {
+     "x": 4.2909,
+     "y": 0.6537,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.9939,
+     "y": 0.6834,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7091,
+     "y": 0.6537,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.4242,
+     "y": 0.4956,
+     "area_px": 69,
+     "n_est": 1
+    },
+    {
+     "x": 7.1419,
+     "y": 0.1004,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 7.857,
+     "y": -0.0676,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 8.5697,
+     "y": -0.0973,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.2824,
+     "y": -0.0676,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 9.9975,
+     "y": 0.0015,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15
+  },
+  "7": {
+   "experiment": "A3_margin_0.5",
+   "group": "A",
+   "image": "reference/slides/slide07.png",
+   "image_size": [
+    985,
+    480
+   ],
+   "m_per_px": 0.01212,
+   "calibration": {
+    "top": 26,
+    "bottom": 431,
+    "left": 72,
+    "right": 979,
+    "ax": 0.012121212121212118,
+    "bx": -1.3696969696969707,
+    "ay": -0.009881382901779256,
+    "by": 2.758444958773326
+   },
+   "slide_text": "DecompROS + QSQP 演算法測試結果 (3)\ny_min, y_max = -2.0, 2.0\ny_max = np.min(top_obs[:, 1]) - 0.5\ny_min = np.max(bottom_obs[:, 1]) + 0.5\nN = 15\nw_smooth, w_ref = 15.0, 1.0",
+   "markers": [
+    {
+     "x": 0.0025,
+     "y": 0.0015,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.7152,
+     "y": 0.1004,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.4278,
+     "y": 0.2288,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 2.143,
+     "y": 0.3968,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 2.861,
+     "y": 0.6156,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 3.5758,
+     "y": 0.8019,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.2909,
+     "y": 0.8118,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.9939,
+     "y": 0.8019,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7091,
+     "y": 0.8118,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.4242,
+     "y": 0.8019,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.139,
+     "y": 0.6156,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 7.857,
+     "y": 0.3968,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 8.5697,
+     "y": 0.2288,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.2848,
+     "y": 0.1004,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9975,
+     "y": 0.0015,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15
+  },
+  "8": {
+   "experiment": "A4_margin_0.8",
+   "group": "A",
+   "image": "reference/slides/slide08.png",
+   "image_size": [
+    986,
+    477
+   ],
+   "m_per_px": 0.01212,
+   "calibration": {
+    "top": 28,
+    "bottom": 433,
+    "left": 71,
+    "right": 978,
+    "ax": 0.01212121212121212,
+    "bx": -1.3575757575757568,
+    "ay": -0.009881382901779251,
+    "by": 2.778207724576882
+   },
+   "slide_text": "DecompROS + QSQP 演算法測試結果 (4)\ny_min, y_max = -2.0, 2.0\ny_max = np.min(top_obs[:, 1]) - 0.8\ny_min = np.max(bottom_obs[:, 1]) + 0.8\nN = 15\nw_smooth, w_ref = 15.0, 1.0",
+   "markers": [],
+   "n_points_detected": 0
+  },
+  "9": {
+   "experiment": "A5_N30",
+   "group": "A",
+   "image": "reference/slides/slide09.png",
+   "image_size": [
+    987,
+    482
+   ],
+   "m_per_px": 0.01212,
+   "calibration": {
+    "top": 30,
+    "bottom": 435,
+    "left": 72,
+    "right": 979,
+    "ax": 0.012121212121212118,
+    "bx": -1.3696969696969707,
+    "ay": -0.009881382901779262,
+    "by": 2.797970490380445
+   },
+   "slide_text": "DecompROS + QSQP 演算法測試結果 (5)\ny_min, y_max = -2.0, 2.0\ny_max = np.min(top_obs[:, 1]) - 0.2\ny_min = np.max(bottom_obs[:, 1]) + 0.2\nN = 30\nw_smooth, w_ref = 15.0, 1.0",
+   "markers": [
+    {
+     "x": 0.0025,
+     "y": 0.0015,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.3515,
+     "y": -0.0083,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 0.6909,
+     "y": -0.0083,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.0303,
+     "y": -0.0182,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.3818,
+     "y": -0.0182,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.7212,
+     "y": -0.0182,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.0727,
+     "y": 0.0015,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.4125,
+     "y": 0.0425,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 2.7612,
+     "y": 0.1201,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 3.1006,
+     "y": 0.2387,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 3.4424,
+     "y": 0.377,
+     "area_px": 61,
+     "n_est": 1
+    },
+    {
+     "x": 3.7939,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.1333,
+     "y": 0.5055,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.4848,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.8242,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.1758,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.5152,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.8667,
+     "y": 0.5055,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.2061,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.5483,
+     "y": 0.3755,
+     "area_px": 65,
+     "n_est": 1
+    },
+    {
+     "x": 6.897,
+     "y": 0.2387,
+     "area_px": 69,
+     "n_est": 1
+    },
+    {
+     "x": 7.2388,
+     "y": 0.1201,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 7.5875,
+     "y": 0.0425,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 7.9273,
+     "y": 0.0015,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.2788,
+     "y": -0.0182,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.6182,
+     "y": -0.0182,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.9576,
+     "y": -0.0182,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.3091,
+     "y": -0.0083,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.6485,
+     "y": -0.0083,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9975,
+     "y": 0.0015,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 30
+  },
+  "10": {
+   "experiment": "A6_w_smooth_150",
+   "group": "A",
+   "image": "reference/slides/slide10.png",
+   "image_size": [
+    987,
+    480
+   ],
+   "m_per_px": 0.01212,
+   "calibration": {
+    "top": 29,
+    "bottom": 434,
+    "left": 75,
+    "right": 982,
+    "ax": 0.012121212121212125,
+    "bx": -1.406060606060601,
+    "ay": -0.009881382901779262,
+    "by": 2.788089107478664
+   },
+   "slide_text": "DecompROS + QSQP 演算法測試結果 (6)\ny_min, y_max = -2.0, 2.0\ny_max = np.min(top_obs[:, 1]) - 0.2\ny_min = np.max(bottom_obs[:, 1]) + 0.2\nN = 15\nw_smooth, w_ref = 150.0, 1.0",
+   "markers": [
+    {
+     "x": 0.0,
+     "y": 0.0015,
+     "area_px": 61,
+     "n_est": 1
+    },
+    {
+     "x": 0.7155,
+     "y": 0.1117,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 1.4307,
+     "y": 0.2204,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 2.143,
+     "y": 0.3276,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 2.8606,
+     "y": 0.4264,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 3.5758,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.2909,
+     "y": 0.5351,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.9939,
+     "y": 0.545,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7091,
+     "y": 0.5351,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.4242,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.1394,
+     "y": 0.4264,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.857,
+     "y": 0.3276,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 8.5693,
+     "y": 0.2204,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 9.2873,
+     "y": 0.1102,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 9.9975,
+     "y": 0.0015,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15
+  },
+  "11": {
+   "experiment": "A7_w_ref_100",
+   "group": "A",
+   "image": "reference/slides/slide11.png",
+   "image_size": [
+    985,
+    477
+   ],
+   "m_per_px": 0.01212,
+   "calibration": {
+    "top": 27,
+    "bottom": 432,
+    "left": 68,
+    "right": 975,
+    "ax": 0.012121212121212121,
+    "bx": -1.32121212121212,
+    "ay": -0.009881382901779255,
+    "by": 2.7683263416751047
+   },
+   "slide_text": "DecompROS + QSQP 演算法測試結果 (7)\ny_min, y_max = -2.0, 2.0\ny_max = np.min(top_obs[:, 1]) - 0.2\ny_min = np.max(bottom_obs[:, 1]) + 0.2\nN = 15\nw_smooth, w_ref = 15.0, 100.0",
+   "markers": [
+    {
+     "x": 0.0025,
+     "y": 0.0015,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.7152,
+     "y": 0.0015,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.4303,
+     "y": -0.0083,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.1455,
+     "y": -0.0083,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.8581,
+     "y": 0.0806,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 3.5754,
+     "y": 0.4942,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 4.2909,
+     "y": 0.5055,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.9939,
+     "y": 0.4956,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7091,
+     "y": 0.5055,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.4218,
+     "y": 0.4956,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 7.1419,
+     "y": 0.0806,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 7.8545,
+     "y": -0.0083,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.5697,
+     "y": -0.0083,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.2848,
+     "y": 0.0015,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9975,
+     "y": 0.0015,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15
+  },
+  "18": {
+   "experiment": "B1_base",
+   "group": "B",
+   "image": "reference/slides/slide18.png",
+   "image_size": [
+    922,
+    477
+   ],
+   "m_per_px": 0.01515,
+   "calibration": {
+    "top": 107,
+    "bottom": 371,
+    "left": 74,
+    "right": 800,
+    "ax": 0.01515151515151515,
+    "bx": -1.621212121212121,
+    "ay": -0.015151515151515148,
+    "by": 4.12121212121212
+   },
+   "slide_text": "ESDF + L-BFGS 演算法測試結果 (1)",
+   "markers": [
+    {
+     "x": 0.0031,
+     "y": 0.0,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.7879,
+     "y": -0.0455,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.5,
+     "y": -0.0606,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.0575,
+     "y": -0.0152,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 2.4697,
+     "y": 0.1667,
+     "area_px": 69,
+     "n_est": 1
+    },
+    {
+     "x": 2.9413,
+     "y": 0.4087,
+     "area_px": 71,
+     "n_est": 1
+    },
+    {
+     "x": 3.6667,
+     "y": 0.6061,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.0,
+     "y": 0.6061,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.3182,
+     "y": 0.6061,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.0459,
+     "y": 0.4069,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 7.5152,
+     "y": 0.1667,
+     "area_px": 69,
+     "n_est": 1
+    },
+    {
+     "x": 7.9389,
+     "y": -0.0129,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 8.4848,
+     "y": -0.0606,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.197,
+     "y": -0.0455,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9969,
+     "y": 0.0,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15
+  },
+  "19": {
+   "experiment": "B2_N30",
+   "group": "B",
+   "image": "reference/slides/slide19.png",
+   "image_size": [
+    923,
+    482
+   ],
+   "m_per_px": 0.01515,
+   "calibration": {
+    "top": 109,
+    "bottom": 373,
+    "left": 72,
+    "right": 798,
+    "ax": 0.015151515151515147,
+    "bx": -1.5909090909090877,
+    "ay": -0.015151515151515157,
+    "by": 4.151515151515152
+   },
+   "slide_text": "ESDF + L-BFGS 演算法測試結果 (2)\nN = 30\nd_safe = 0.6\nw_smooth = 5.0\nw_obs = 200.0   \nw_ref = 0.5",
+   "markers": [
+    {
+     "x": 0.0031,
+     "y": -0.0,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.3485,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 0.6818,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.0303,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.3788,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.7273,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.0606,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.4091,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.7576,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 3.1061,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 3.4394,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 3.6789,
+     "y": 0.0148,
+     "area_px": 116,
+     "n_est": 2
+    },
+    {
+     "x": 4.4541,
+     "y": 0.5735,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 4.8333,
+     "y": 0.6061,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.1667,
+     "y": 0.6061,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.5272,
+     "y": 0.5758,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 6.3176,
+     "y": 0.0165,
+     "area_px": 120,
+     "n_est": 2
+    },
+    {
+     "x": 6.5455,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.8939,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.2424,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.5758,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.9242,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.2727,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.6212,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.9545,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.303,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.6515,
+     "y": -0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9969,
+     "y": -0.0,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 30
+  },
+  "20": {
+   "experiment": "B3_d_safe_1.5",
+   "group": "B",
+   "image": "reference/slides/slide20.png",
+   "image_size": [
+    921,
+    482
+   ],
+   "m_per_px": 0.01515,
+   "calibration": {
+    "top": 107,
+    "bottom": 371,
+    "left": 72,
+    "right": 798,
+    "ax": 0.015151515151515147,
+    "bx": -1.5909090909090877,
+    "ay": -0.015151515151515148,
+    "by": 4.12121212121212
+   },
+   "slide_text": "ESDF + L-BFGS 演算法測試結果 (3)\nN = 15\nd_safe = 1.5\nw_smooth = 5.0\nw_obs = 200.0   \nw_ref = 0.5",
+   "markers": [
+    {
+     "x": 0.0031,
+     "y": 0.0,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.7121,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.4242,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.1515,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.7634,
+     "y": 0.0169,
+     "area_px": 112,
+     "n_est": 2
+    },
+    {
+     "x": 2.8363,
+     "y": 0.8001,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.0,
+     "y": 0.6212,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.1486,
+     "y": 0.8001,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.2366,
+     "y": 0.0169,
+     "area_px": 112,
+     "n_est": 2
+    },
+    {
+     "x": 7.8485,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.5606,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.2727,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9969,
+     "y": 0.0,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15
+  },
+  "21": {
+   "experiment": "B4_w_smooth_50",
+   "group": "B",
+   "image": "reference/slides/slide21.png",
+   "image_size": [
+    917,
+    485
+   ],
+   "m_per_px": 0.01515,
+   "calibration": {
+    "top": 110,
+    "bottom": 374,
+    "left": 72,
+    "right": 798,
+    "ax": 0.015151515151515147,
+    "bx": -1.5909090909090877,
+    "ay": -0.015151515151515166,
+    "by": 4.16666666666667
+   },
+   "slide_text": "ESDF + L-BFGS 演算法測試結果 (4)\nN = 15\nd_safe = 0.6\nw_smooth = 50.0\nw_obs = 200.0   \nw_ref = 0.5",
+   "markers": [
+    {
+     "x": 0.0031,
+     "y": -0.0,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.6818,
+     "y": -0.0606,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.3788,
+     "y": -0.0455,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.0762,
+     "y": 0.078,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 2.7883,
+     "y": 0.275,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 3.5,
+     "y": 0.4697,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.2424,
+     "y": 0.6061,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.0,
+     "y": 0.6061,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7576,
+     "y": 0.6061,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.5,
+     "y": 0.4697,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.1965,
+     "y": 0.275,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 7.9086,
+     "y": 0.078,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 8.6061,
+     "y": -0.0455,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.3182,
+     "y": -0.0606,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9969,
+     "y": -0.0,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15
+  },
+  "22": {
+   "experiment": "B5_w_obs_2000",
+   "group": "B",
+   "image": "reference/slides/slide22.png",
+   "image_size": [
+    927,
+    482
+   ],
+   "m_per_px": 0.01515,
+   "calibration": {
+    "top": 107,
+    "bottom": 371,
+    "left": 75,
+    "right": 801,
+    "ax": 0.015151515151515143,
+    "bx": -1.6363636363636345,
+    "ay": -0.015151515151515148,
+    "by": 4.12121212121212
+   },
+   "slide_text": "ESDF + L-BFGS 演算法測試結果 (5)\nN = 15\nd_safe = 0.6\nw_smooth = 5.0\nw_obs = 2000.0   \nw_ref = 0.5",
+   "markers": [
+    {
+     "x": 0.0031,
+     "y": 0.0,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.7121,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.4242,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.1364,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.8636,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 3.4819,
+     "y": 0.0181,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 3.6522,
+     "y": 0.633,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 5.0,
+     "y": 0.6061,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.3455,
+     "y": 0.6334,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.5158,
+     "y": 0.0185,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 7.1364,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.8485,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.5606,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.2727,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9969,
+     "y": 0.0,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15
+  },
+  "23": {
+   "experiment": "B6_w_ref_100",
+   "group": "B",
+   "image": "reference/slides/slide23.png",
+   "image_size": [
+    921,
+    482
+   ],
+   "m_per_px": 0.01515,
+   "calibration": {
+    "top": 108,
+    "bottom": 372,
+    "left": 71,
+    "right": 797,
+    "ax": 0.015151515151515154,
+    "bx": -1.575757575757576,
+    "ay": -0.01515151515151515,
+    "by": 4.136363636363637
+   },
+   "slide_text": "ESDF + L-BFGS 演算法測試結果 (6)\nN = 15\nd_safe = 0.6\nw_smooth = 5.0\nw_obs = 200.0   \nw_ref = 100.0",
+   "markers": [
+    {
+     "x": 0.0031,
+     "y": 0.0,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.7121,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.4242,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.1515,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.8485,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 3.5272,
+     "y": 0.0455,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 4.2448,
+     "y": 0.4108,
+     "area_px": 70,
+     "n_est": 1
+    },
+    {
+     "x": 5.0,
+     "y": 0.5,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.74,
+     "y": 0.4108,
+     "area_px": 70,
+     "n_est": 1
+    },
+    {
+     "x": 6.4576,
+     "y": 0.0455,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 7.1364,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.8485,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.5606,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.2727,
+     "y": 0.0,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9969,
+     "y": 0.0,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15
+  },
+  "26": {
+   "experiment": "C1_wide_channel",
+   "group": "C",
+   "image": "reference/slides/slide26.png",
+   "image_size": [
+    1098,
+    577
+   ],
+   "m_per_px": 0.01242,
+   "calibration": {
+    "top": 126,
+    "bottom": 448,
+    "left": 72,
+    "right": 958,
+    "ax": 0.012422360248447206,
+    "bx": -1.391304347826087,
+    "ay": -0.012411986899314154,
+    "by": 4.0594820207922035
+   },
+   "slide_text": "ESDF Field + L-GFBS + 1-D QSQP Opt. (1)\nv_opt = optimize_velocity_profile(\n        Q_opt, \n        esdf_map, \n        v_target=1.0, \n        a_max=0.5, \n        a_lat_max=0.5, \n        d_safety_margin=0.6, \n        v_obstacle_limit=0.5\n    )\nw_v = 1.0  # 貼近指定速度的權重\nw_a = 5.0  # 懲罰縱向加速度的權重\ndef _add_wall_obstacles(self):\n        \"\"\"填入 Costmap 障礙物區域\"\"\"\n        x_indices = np.linspace(self.x_min, self.x_max, self.nx)\n        y_indices = np.linspace(self.y_min, self.y_max, self.ny)\n        \n        for ix, x in enumerate(x_indices):\n            for iy, y in enumerate(y_indices):\n                if 4.0 <= x <= 6.0:\n                    # 避開中間通道 y in [-0.8, 0.9]\n                    if not (-0.8 < y < 0.9):\n                        self.costmap[iy, ix] = True\n# 利用 ESDF 距離場判斷與障礙物距離\n        dist, _ = esdf_map.get_esdf_and_grad(Q_opt[i, 0], Q_opt[i, 1])\n        if dist < d_safety_margin:\n            v_max_obs = v_obstacle_limit  # 靠近障礙物時限速 (例如 0.5 m/s)\n        else:\n            v_max_obs = v_target",
+   "markers": [
+    {
+     "x": 0.0025,
+     "y": 0.0008,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.7205,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.4286,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.1491,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.8571,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 3.5776,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.2857,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.0062,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7143,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.4348,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.1429,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.8634,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.5714,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.2919,
+     "y": 0.0008,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9975,
+     "y": 0.0008,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15,
+   "velocity_labels": [
+    "0.00",
+    "0.68",
+    "0.85",
+    "0.92",
+    "0.96",
+    "0.98",
+    "0.99",
+    "0.99",
+    "0.99",
+    "0.98",
+    "0.96",
+    "0.92",
+    "0.85",
+    "0.68",
+    "0.00"
+   ]
+  },
+  "27": {
+   "experiment": "C2_w_a_5",
+   "group": "C",
+   "image": "reference/slides/slide27.png",
+   "image_size": [
+    1097,
+    582
+   ],
+   "m_per_px": 0.01242,
+   "calibration": {
+    "top": 128,
+    "bottom": 450,
+    "left": 72,
+    "right": 958,
+    "ax": 0.012422360248447206,
+    "bx": -1.391304347826087,
+    "ay": -0.012411986899314153,
+    "by": 4.084305994590832
+   },
+   "slide_text": "ESDF Field + L-GFBS + 1-D QSQP Opt. (2)\nv_opt = optimize_velocity_profile(\n        Q_opt, \n        esdf_map, \n        v_target=1.0, \n        a_max=0.5, \n        a_lat_max=0.5, \n        d_safety_margin=0.6, \n        v_obstacle_limit=0.5\n    )\nw_v = 1.0  # 貼近指定速度的權重\nw_a = 5.0  # 懲罰縱向加速度的權重\ndef _add_wall_obstacles(self):\n        \"\"\"填入 Costmap 障礙物區域\"\"\"\n        x_indices = np.linspace(self.x_min, self.x_max, self.nx)\n        y_indices = np.linspace(self.y_min, self.y_max, self.ny)\n        \n        for ix, x in enumerate(x_indices):\n            for iy, y in enumerate(y_indices):\n                if 4.0 <= x <= 6.0:\n                    # 避開中間通道 y in [0.3, 0.9]\n                    if not (0.3 < y < 0.9):\n                        self.costmap[iy, ix] = True\n# 利用 ESDF 距離場判斷與障礙物距離\n        dist, _ = esdf_map.get_esdf_and_grad(Q_opt[i, 0], Q_opt[i, 1])\n        if dist < d_safety_margin:\n            v_max_obs = v_obstacle_limit  # 靠近障礙物時限速 (例如 0.5 m/s)\n        else:\n            v_max_obs = v_target",
+   "markers": [
+    {
+     "x": 0.0025,
+     "y": 0.0008,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.6957,
+     "y": -0.0489,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.3913,
+     "y": -0.0365,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.1013,
+     "y": 0.0642,
+     "area_px": 70,
+     "n_est": 1
+    },
+    {
+     "x": 2.8078,
+     "y": 0.2384,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 3.5159,
+     "y": 0.437,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 4.2484,
+     "y": 0.5965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.0062,
+     "y": 0.5965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7516,
+     "y": 0.5965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.4969,
+     "y": 0.4352,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.2046,
+     "y": 0.2384,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 7.9006,
+     "y": 0.0628,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.6211,
+     "y": -0.0365,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.3168,
+     "y": -0.0489,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9975,
+     "y": 0.0008,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15,
+   "velocity_labels": [
+    "0.00",
+    "0.64",
+    "0.78",
+    "0.81",
+    "0.74",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.74",
+    "0.81",
+    "0.78",
+    "0.64",
+    "0.00"
+   ]
+  },
+  "28": {
+   "experiment": "C3_w_a_0.1",
+   "group": "C",
+   "image": "reference/slides/slide28.png",
+   "image_size": [
+    1098,
+    580
+   ],
+   "m_per_px": 0.01242,
+   "calibration": {
+    "top": 129,
+    "bottom": 451,
+    "left": 73,
+    "right": 959,
+    "ax": 0.012422360248447208,
+    "bx": -1.4037267080745313,
+    "ay": -0.012411986899314158,
+    "by": 4.096717981490148
+   },
+   "slide_text": "ESDF Field + L-GFBS + 1-D QSQP Opt. (3)\nv_opt = optimize_velocity_profile(\n        Q_opt, \n        esdf_map, \n        v_target=1.0, \n        a_max=0.5, \n        a_lat_max=0.5, \n        d_safety_margin=0.6, \n        v_obstacle_limit=0.5\n    )\nw_v = 1.0  # 貼近指定速度的權重\nw_a = 0.1  # 懲罰縱向加速度的權重\ndef _add_wall_obstacles(self):\n        \"\"\"填入 Costmap 障礙物區域\"\"\"\n        x_indices = np.linspace(self.x_min, self.x_max, self.nx)\n        y_indices = np.linspace(self.y_min, self.y_max, self.ny)\n        \n        for ix, x in enumerate(x_indices):\n            for iy, y in enumerate(y_indices):\n                if 4.0 <= x <= 6.0:\n                    # 避開中間通道 y in [0.3, 0.9]\n                    if not (0.3 < y < 0.9):\n                        self.costmap[iy, ix] = True\n# 利用 ESDF 距離場判斷與障礙物距離\n        dist, _ = esdf_map.get_esdf_and_grad(Q_opt[i, 0], Q_opt[i, 1])\n        if dist < d_safety_margin:\n            v_max_obs = v_obstacle_limit  # 靠近障礙物時限速 (例如 0.5 m/s)\n        else:\n            v_max_obs = v_target",
+   "markers": [
+    {
+     "x": 0.0025,
+     "y": 0.0008,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.6957,
+     "y": -0.0489,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.3913,
+     "y": -0.0365,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.1013,
+     "y": 0.0642,
+     "area_px": 70,
+     "n_est": 1
+    },
+    {
+     "x": 2.8078,
+     "y": 0.2384,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 3.5159,
+     "y": 0.437,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 4.2484,
+     "y": 0.5965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.0062,
+     "y": 0.5965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7516,
+     "y": 0.5965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.4969,
+     "y": 0.4352,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.2046,
+     "y": 0.2384,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 7.9006,
+     "y": 0.0628,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.6211,
+     "y": -0.0365,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.3168,
+     "y": -0.0489,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.9975,
+     "y": 0.0008,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15,
+   "velocity_labels": [
+    "0.00",
+    "0.98",
+    "1.00",
+    "1.00",
+    "0.98",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.98",
+    "1.00",
+    "1.00",
+    "0.98",
+    "0.00"
+   ]
+  },
+  "29": {
+   "experiment": "D1_wide_corridor",
+   "group": "D",
+   "image": "reference/slides/slide29.png",
+   "image_size": [
+    1192,
+    587
+   ],
+   "m_per_px": 0.00994,
+   "calibration": {
+    "top": 33,
+    "bottom": 538,
+    "left": 75,
+    "right": 1182,
+    "ax": 0.009936116903457469,
+    "bx": -1.2448494738230185,
+    "ay": -0.007915548913497508,
+    "by": 2.7603289675209557
+   },
+   "slide_text": "DecompROS + Traj. QSQP Opt. + Speed/Accel. QSQP Opt. (1)\nv_opt = optimize_velocity_profile(\n        Q_opt, \n        corridor_boxes, \n        v_target=1.0, \n        a_max=0.5, \n        a_lat_max=0.5, \n        v_corridor_limit=0.5\n    )\nw_v = 1.0  # 貼近指定速度的權重\nw_a = 5.0   # 懲罰縱向加速度的權重\n# 下半部牆壁\n    for x in np.linspace(4.0, 6.0, 15):\n        for y in np.linspace(-1.5, -0.5, 15):\n            obs_points.append([x, y])\n    # 上半部牆壁\n    for x in np.linspace(4.0, 6.0, 15):\n        for y in np.linspace(2.2, 3.0, 10):\n            obs_points.append([x, y])\n    return np.array(obs_points)\n# 約束 2: 每個點的速度上限 q_i <= min(v_target^2, a_lat_max / kappa_i, v_corridor_limit^2)\n    for i in range(num_q):\n        A_osqp[row_idx, i] = 1.0\n        l_osqp[row_idx] = 0.0 # v^2 >= 0\n        \n        # 1. 幾何曲率限制側向加速度：v^2 * kappa <= a_lat_max\n        if kappa[i] > 1e-3:\n            v_max_kappa = np.sqrt(a_lat_max / kappa[i])\n        else:\n            v_max_kappa = v_target\n\n        # 2. 走廊寬度限速（若 Corridor 寬度 < 2.0m，強制限制最高速度）\n        corridor_width = corridor_boxes[i][2] - corridor_boxes[i][1]\n        if corridor_width < 2.0:\n            v_max_corridor = v_corridor_limit  # 窄道安全限速\n        else:\n            v_max_corridor = v_target\n\n        # 最終速限取三者的最小值\n        v_max_i = min(v_target, v_max_kappa, v_max_corridor)\n\n        u_osqp[row_idx] = v_max_i ** 2\n        row_idx += 1",
+   "markers": [
+    {
+     "x": -0.0008,
+     "y": -0.0022,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 0.7126,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.428,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.1434,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 2.8588,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 3.5742,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.2896,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.995,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7104,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.4258,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.1412,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.8566,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 8.572,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.2874,
+     "y": -0.0022,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 10.0008,
+     "y": -0.0022,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15,
+   "velocity_labels": [
+    "0.00",
+    "0.68",
+    "0.85",
+    "0.92",
+    "0.96",
+    "0.98",
+    "0.99",
+    "0.99",
+    "0.99",
+    "0.98",
+    "0.96",
+    "0.92",
+    "0.85",
+    "0.68",
+    "0.00"
+   ]
+  },
+  "30": {
+   "experiment": "D2_w_a_5",
+   "group": "D",
+   "image": "reference/slides/slide30.png",
+   "image_size": [
+    1188,
+    577
+   ],
+   "m_per_px": 0.00994,
+   "calibration": {
+    "top": 26,
+    "bottom": 531,
+    "left": 75,
+    "right": 1182,
+    "ax": 0.009936116903457469,
+    "bx": -1.2448494738230185,
+    "ay": -0.00791554891349751,
+    "by": 2.704920125126474
+   },
+   "slide_text": "DecompROS + Traj. QSQP Opt. + Speed/Accel. QSQP Opt. (2)\nv_opt = optimize_velocity_profile(\n        Q_opt, \n        corridor_boxes, \n        v_target=1.0, \n        a_max=0.5, \n        a_lat_max=0.5, \n        v_corridor_limit=0.5\n    )\nw_v = 1.0  # 貼近指定速度的權重\nw_a = 5.0   # 懲罰縱向加速度的權重\n# 下半部牆壁\n    for x in np.linspace(4.0, 6.0, 15):\n        for y in np.linspace(-1.5, 0.3, 15):\n            obs_points.append([x, y])\n    # 上半部牆壁\n    for x in np.linspace(4.0, 6.0, 15):\n        for y in np.linspace(1.8, 2.5, 10):\n            obs_points.append([x, y])\n    return np.array(obs_points)\n# 約束 2: 每個點的速度上限 q_i <= min(v_target^2, a_lat_max / kappa_i, v_corridor_limit^2)\n    for i in range(num_q):\n        A_osqp[row_idx, i] = 1.0\n        l_osqp[row_idx] = 0.0 # v^2 >= 0\n        \n        # 1. 幾何曲率限制側向加速度：v^2 * kappa <= a_lat_max\n        if kappa[i] > 1e-3:\n            v_max_kappa = np.sqrt(a_lat_max / kappa[i])\n        else:\n            v_max_kappa = v_target\n\n        # 2. 走廊寬度限速（若 Corridor 寬度 < 2.0m，強制限制最高速度）\n        corridor_width = corridor_boxes[i][2] - corridor_boxes[i][1]\n        if corridor_width < 2.0:\n            v_max_corridor = v_corridor_limit  # 窄道安全限速\n        else:\n            v_max_corridor = v_target\n\n        # 最終速限取三者的最小值\n        v_max_i = min(v_target, v_max_kappa, v_max_corridor)\n\n        u_osqp[row_idx] = v_max_i ** 2\n        row_idx += 1",
+   "markers": [
+    {
+     "x": -0.0028,
+     "y": -0.0022,
+     "area_px": 61,
+     "n_est": 1
+    },
+    {
+     "x": 0.7126,
+     "y": 0.0611,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.4259,
+     "y": 0.1403,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 2.1437,
+     "y": 0.2523,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 2.8567,
+     "y": 0.3857,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 3.5742,
+     "y": 0.4965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.2896,
+     "y": 0.5044,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.995,
+     "y": 0.4965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7104,
+     "y": 0.5044,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.4258,
+     "y": 0.4965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.1412,
+     "y": 0.3857,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.8587,
+     "y": 0.2511,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 8.572,
+     "y": 0.1403,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.2874,
+     "y": 0.0611,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 10.0008,
+     "y": -0.0022,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15,
+   "velocity_labels": [
+    "0.00",
+    "0.65",
+    "0.79",
+    "0.81",
+    "0.74",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.74",
+    "0.81",
+    "0.79",
+    "0.65",
+    "0.00"
+   ]
+  },
+  "31": {
+   "experiment": "D3_w_a_0.1",
+   "group": "D",
+   "image": "reference/slides/slide31.png",
+   "image_size": [
+    1187,
+    582
+   ],
+   "m_per_px": 0.00994,
+   "calibration": {
+    "top": 31,
+    "bottom": 536,
+    "left": 73,
+    "right": 1180,
+    "ax": 0.009936116903457474,
+    "bx": -1.2249772400161059,
+    "ay": -0.007915548913497506,
+    "by": 2.74449786969396
+   },
+   "slide_text": "DecompROS + Traj. QSQP Opt. + Speed/Accel. QSQP Opt. (3)\nv_opt = optimize_velocity_profile(\n        Q_opt, \n        corridor_boxes, \n        v_target=1.0, \n        a_max=0.5, \n        a_lat_max=0.5, \n        v_corridor_limit=0.5\n    )\nw_v = 1.0  # 貼近指定速度的權重\nw_a = 0.1   # 懲罰縱向加速度的權重\n# 下半部牆壁\n    for x in np.linspace(4.0, 6.0, 15):\n        for y in np.linspace(-1.5, 0.3, 15):\n            obs_points.append([x, y])\n    # 上半部牆壁\n    for x in np.linspace(4.0, 6.0, 15):\n        for y in np.linspace(1.8, 2.5, 10):\n            obs_points.append([x, y])\n    return np.array(obs_points)\n# 約束 2: 每個點的速度上限 q_i <= min(v_target^2, a_lat_max / kappa_i, v_corridor_limit^2)\n    for i in range(num_q):\n        A_osqp[row_idx, i] = 1.0\n        l_osqp[row_idx] = 0.0 # v^2 >= 0\n        \n        # 1. 幾何曲率限制側向加速度：v^2 * kappa <= a_lat_max\n        if kappa[i] > 1e-3:\n            v_max_kappa = np.sqrt(a_lat_max / kappa[i])\n        else:\n            v_max_kappa = v_target\n\n        # 2. 走廊寬度限速（若 Corridor 寬度 < 2.0m，強制限制最高速度）\n        corridor_width = corridor_boxes[i][2] - corridor_boxes[i][1]\n        if corridor_width < 2.0:\n            v_max_corridor = v_corridor_limit  # 窄道安全限速\n        else:\n            v_max_corridor = v_target\n\n        # 最終速限取三者的最小值\n        v_max_i = min(v_target, v_max_kappa, v_max_corridor)\n\n        u_osqp[row_idx] = v_max_i ** 2\n        row_idx += 1",
+   "markers": [
+    {
+     "x": -0.0028,
+     "y": -0.0022,
+     "area_px": 61,
+     "n_est": 1
+    },
+    {
+     "x": 0.7126,
+     "y": 0.0611,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 1.4259,
+     "y": 0.1403,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 2.1437,
+     "y": 0.2523,
+     "area_px": 68,
+     "n_est": 1
+    },
+    {
+     "x": 2.8567,
+     "y": 0.3857,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 3.5742,
+     "y": 0.4965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.2896,
+     "y": 0.5044,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 4.995,
+     "y": 0.4965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 5.7104,
+     "y": 0.5044,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 6.4258,
+     "y": 0.4965,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.1412,
+     "y": 0.3857,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 7.8587,
+     "y": 0.2511,
+     "area_px": 64,
+     "n_est": 1
+    },
+    {
+     "x": 8.572,
+     "y": 0.1403,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 9.2874,
+     "y": 0.0611,
+     "area_px": 67,
+     "n_est": 1
+    },
+    {
+     "x": 10.0008,
+     "y": -0.0022,
+     "area_px": 64,
+     "n_est": 1
+    }
+   ],
+   "n_points_detected": 15,
+   "velocity_labels": [
+    "0.00",
+    "0.98",
+    "1.00",
+    "1.00",
+    "0.98",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.98",
+    "1.00",
+    "1.00",
+    "0.98",
+    "0.00"
+   ]
+  }
+ }
+}

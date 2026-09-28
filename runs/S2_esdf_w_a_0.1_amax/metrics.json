@@ -1,0 +1,181 @@
+{
+  "id": "S2_esdf_w_a_0.1_amax",
+  "base_experiment": "S2_esdf_w_a_0.1_amax",
+  "group": "C",
+  "method": "ESDF + L-BFGS",
+  "type": "esdf_velocity",
+  "slide": null,
+  "suggested": true,
+  "custom": false,
+  "desc": "C3 + 加入 |a| <= a_max 硬約束",
+  "overrides": {},
+  "params": {
+    "N": 15,
+    "map": {
+      "x_min": -0.5,
+      "x_max": 10.5,
+      "y_min": -1.5,
+      "y_max": 2.5,
+      "resolution": 0.05,
+      "lookup": "nearest"
+    },
+    "walls": {
+      "x_range": [
+        4.0,
+        6.0
+      ],
+      "channel": [
+        0.3,
+        0.9
+      ]
+    },
+    "ego": {
+      "d_safe": 0.6,
+      "w_smooth": 50.0,
+      "w_obs": 200.0,
+      "w_ref": 5.0
+    },
+    "lbfgs": {},
+    "velocity": {
+      "v_target": 1.0,
+      "a_max": 0.5,
+      "a_lat_max": 0.5,
+      "d_safety_margin": 0.6,
+      "v_obstacle_limit": 0.5,
+      "w_v": 1.0,
+      "w_a": 0.1,
+      "enforce_a_max": true
+    },
+    "osqp": {},
+    "plot": {
+      "figsize": [
+        12,
+        6
+      ]
+    }
+  },
+  "solver": {
+    "name": "scipy L-BFGS-B",
+    "status": "ABNORMAL: ",
+    "converged_normally": false,
+    "iterations": 18,
+    "function_evals": 71,
+    "wall_time_ms": 10.848154000996146,
+    "objective": 28.899567554717024,
+    "J_smooth": 4.490107484761806,
+    "J_obs": 16.389708933969608,
+    "J_ref": 8.019751135985599,
+    "n_points_inside_d_safe": 5
+  },
+  "esdf_grid": {
+    "nx": 220,
+    "ny": 80,
+    "min": -1.0,
+    "max": 4.509988913511872,
+    "lookup": "nearest"
+  },
+  "metrics": {
+    "path_length_m": 10.149663813453756,
+    "smoothness_sum_d2": 0.08980214969523612,
+    "max_d2_m": 0.15580181805294038,
+    "max_curvature_1pm": 0.2738306277841822,
+    "max_heading_change_deg": 11.855026722270795,
+    "min_segment_m": 0.6924254391962117,
+    "max_segment_m": 0.7553866723558853,
+    "mean_dev_from_ref_m": 0.23513341391316664,
+    "max_dev_from_ref_m": 0.600824868866181,
+    "min_clearance_points_m": 0.2957189993588182,
+    "min_clearance_polyline_m": 0.23667484088595692,
+    "polyline_collision": false,
+    "travel_time_s": 15.773094448315135,
+    "mean_speed_mps": 0.6434795560701111,
+    "peak_speed_mps": 0.9989885972036696,
+    "max_abs_accel_mps2": 0.49999999948807405,
+    "a_max_violation": false,
+    "max_lat_accel_mps2": 0.18348328869084762,
+    "n_env_limited": 5,
+    "n_points_at_reduced_limit": 5,
+    "velocity_status": "solved",
+    "velocity_iterations": 75,
+    "velocity_solve_ms": 0.14388
+  },
+  "velocity_labels": [
+    "0.00",
+    "0.83",
+    "0.99",
+    "1.00",
+    "0.98",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.50",
+    "0.98",
+    "1.00",
+    "0.99",
+    "0.83",
+    "0.00"
+  ],
+  "trajectory": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.691028,
+      -0.043975
+    ],
+    [
+      1.388475,
+      -0.039413
+    ],
+    [
+      2.097402,
+      0.05918
+    ],
+    [
+      2.801685,
+      0.239141
+    ],
+    [
+      3.508672,
+      0.435527
+    ],
+    [
+      4.246878,
+      0.595719
+    ],
+    [
+      5.0,
+      0.600825
+    ],
+    [
+      5.753122,
+      0.595719
+    ],
+    [
+      6.491328,
+      0.435527
+    ],
+    [
+      7.198315,
+      0.239141
+    ],
+    [
+      7.902598,
+      0.05918
+    ],
+    [
+      8.611525,
+      -0.039413
+    ],
+    [
+      9.308972,
+      -0.043975
+    ],
+    [
+      10.0,
+      0.0
+    ]
+  ]
+}

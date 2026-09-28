@@ -1,0 +1,9 @@
+18:57:07 INFO config=/home/david/Collision_trajectory_planning/configs/experiments.yaml  overrides=[]  experiments=['A1_base', 'A2_default_bounds_0.1', 'A3_margin_0.5', 'A4_margin_0.8', 'A5_N30', 'A6_w_smooth_150', 'A7_w_ref_100']
+18:57:08 INFO A1_base                      solved                             it=50   len=10.075 m  min_clear=+0.200 m
+18:57:08 INFO A2_default_bounds_0.1        solved                             it=50   len=10.291 m  min_clear=+0.284 m
+18:57:08 INFO A3_margin_0.5                solved                             it=50   len=10.189 m  min_clear=+0.500 m
+18:57:08 INFO A4_margin_0.8                primal infeasible                  it=50  
+18:57:09 INFO A5_N30                       solved                             it=50   len=10.159 m  min_clear=+0.200 m
+18:57:09 INFO A6_w_smooth_150              solved                             it=50   len=10.073 m  min_clear=+0.222 m
+18:57:09 INFO A7_w_ref_100                 solved                             it=100  len=10.242 m  min_clear=+0.199 m
+18:57:09 INFO 完成 7 個實驗，輸出於 /home/david/Collision_trajectory_planning/runs

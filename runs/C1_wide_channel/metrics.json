@@ -1,0 +1,181 @@
+{
+  "id": "C1_wide_channel",
+  "base_experiment": "C1_wide_channel",
+  "group": "C",
+  "method": "ESDF + L-BFGS",
+  "type": "esdf_velocity",
+  "slide": 26,
+  "suggested": false,
+  "custom": false,
+  "desc": "通道 y 在 (-0.8, 0.9)，直線即可通過",
+  "overrides": {},
+  "params": {
+    "N": 15,
+    "map": {
+      "x_min": -0.5,
+      "x_max": 10.5,
+      "y_min": -1.5,
+      "y_max": 2.5,
+      "resolution": 0.05,
+      "lookup": "nearest"
+    },
+    "walls": {
+      "x_range": [
+        4.0,
+        6.0
+      ],
+      "channel": [
+        -0.8,
+        0.9
+      ]
+    },
+    "ego": {
+      "d_safe": 0.6,
+      "w_smooth": 50.0,
+      "w_obs": 200.0,
+      "w_ref": 5.0
+    },
+    "lbfgs": {},
+    "velocity": {
+      "v_target": 1.0,
+      "a_max": 0.5,
+      "a_lat_max": 0.5,
+      "d_safety_margin": 0.6,
+      "v_obstacle_limit": 0.5,
+      "w_v": 1.0,
+      "w_a": 5.0,
+      "enforce_a_max": false
+    },
+    "osqp": {},
+    "plot": {
+      "figsize": [
+        12,
+        6
+      ]
+    }
+  },
+  "solver": {
+    "name": "scipy L-BFGS-B",
+    "status": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+    "converged_normally": true,
+    "iterations": 0,
+    "function_evals": 1,
+    "wall_time_ms": 0.7800900020811241,
+    "objective": 5.226203497089203e-28,
+    "J_smooth": 5.226203497089203e-28,
+    "J_obs": 0.0,
+    "J_ref": 0.0,
+    "n_points_inside_d_safe": 0
+  },
+  "esdf_grid": {
+    "nx": 220,
+    "ny": 80,
+    "min": -1.0,
+    "max": 4.579574216016158,
+    "lookup": "nearest"
+  },
+  "metrics": {
+    "path_length_m": 10.0,
+    "smoothness_sum_d2": 1.0452406994178406e-29,
+    "max_d2_m": 1.7763568394002505e-15,
+    "max_curvature_1pm": 0.0,
+    "max_heading_change_deg": 0.0,
+    "min_segment_m": 0.7142857142857135,
+    "max_segment_m": 0.7142857142857153,
+    "mean_dev_from_ref_m": 0.0,
+    "max_dev_from_ref_m": 0.0,
+    "min_clearance_points_m": 0.7999999999999999,
+    "min_clearance_polyline_m": 0.7999999999999999,
+    "polyline_collision": false,
+    "travel_time_s": 13.56806926680789,
+    "mean_speed_mps": 0.737024539258758,
+    "peak_speed_mps": 0.9876420836609948,
+    "max_abs_accel_mps2": 0.3264771797240112,
+    "a_max_violation": false,
+    "max_lat_accel_mps2": 0.0,
+    "n_env_limited": 0,
+    "n_points_at_reduced_limit": 0,
+    "velocity_status": "solved",
+    "velocity_iterations": 25,
+    "velocity_solve_ms": 0.105129
+  },
+  "velocity_labels": [
+    "0.00",
+    "0.68",
+    "0.85",
+    "0.92",
+    "0.96",
+    "0.98",
+    "0.99",
+    "0.99",
+    "0.99",
+    "0.98",
+    "0.96",
+    "0.92",
+    "0.85",
+    "0.68",
+    "0.00"
+  ],
+  "trajectory": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.714286,
+      0.0
+    ],
+    [
+      1.428571,
+      0.0
+    ],
+    [
+      2.142857,
+      0.0
+    ],
+    [
+      2.857143,
+      0.0
+    ],
+    [
+      3.571429,
+      0.0
+    ],
+    [
+      4.285714,
+      0.0
+    ],
+    [
+      5.0,
+      0.0
+    ],
+    [
+      5.714286,
+      0.0
+    ],
+    [
+      6.428571,
+      0.0
+    ],
+    [
+      7.142857,
+      0.0
+    ],
+    [
+      7.857143,
+      0.0
+    ],
+    [
+      8.571429,
+      0.0
+    ],
+    [
+      9.285714,
+      0.0
+    ],
+    [
+      10.0,
+      0.0
+    ]
+  ]
+}

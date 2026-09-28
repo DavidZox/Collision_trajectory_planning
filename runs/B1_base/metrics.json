@@ -1,0 +1,142 @@
+{
+  "id": "B1_base",
+  "base_experiment": "B1_base",
+  "group": "B",
+  "method": "ESDF + L-BFGS",
+  "type": "esdf_lbfgs",
+  "slide": 18,
+  "suggested": false,
+  "custom": false,
+  "desc": "基準：d_safe 0.6、w_smooth 5、w_obs 200、w_ref 0.5",
+  "overrides": {},
+  "params": {
+    "N": 15,
+    "map": {
+      "x_min": -0.5,
+      "x_max": 10.5,
+      "y_min": -1.5,
+      "y_max": 2.5,
+      "resolution": 0.05,
+      "lookup": "nearest"
+    },
+    "walls": {
+      "x_range": [
+        4.0,
+        6.0
+      ],
+      "channel": [
+        0.3,
+        0.9
+      ]
+    },
+    "ego": {
+      "d_safe": 0.6,
+      "w_smooth": 5.0,
+      "w_obs": 200.0,
+      "w_ref": 0.5
+    },
+    "lbfgs": {},
+    "plot": {
+      "figsize": [
+        10,
+        5
+      ]
+    }
+  },
+  "solver": {
+    "name": "scipy L-BFGS-B",
+    "status": "ABNORMAL: ",
+    "converged_normally": false,
+    "iterations": 21,
+    "function_evals": 78,
+    "wall_time_ms": 12.188548997073667,
+    "objective": 13.633584319613135,
+    "J_smooth": 5.493383827222513,
+    "J_obs": 6.4747757789788585,
+    "J_ref": 1.665424713390007,
+    "n_points_inside_d_safe": 3
+  },
+  "esdf_grid": {
+    "nx": 220,
+    "ny": 80,
+    "min": -1.0,
+    "max": 4.509988913511872,
+    "lookup": "nearest"
+  },
+  "metrics": {
+    "path_length_m": 10.253022718723315,
+    "smoothness_sum_d2": 1.0986767654445027,
+    "max_d2_m": 0.633281332418661,
+    "max_curvature_1pm": 0.6152094416488669,
+    "max_heading_change_deg": 17.900814476069254,
+    "min_segment_m": 0.4521434339805199,
+    "max_segment_m": 1.3244953425618455,
+    "mean_dev_from_ref_m": 0.3444402867047218,
+    "max_dev_from_ref_m": 0.8616137372105911,
+    "min_clearance_points_m": 0.29987681880587225,
+    "min_clearance_polyline_m": 0.29370934133396476,
+    "polyline_collision": false
+  },
+  "trajectory": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.790433,
+      -0.04651
+    ],
+    [
+      1.50414,
+      -0.061971
+    ],
+    [
+      2.061545,
+      -0.016331
+    ],
+    [
+      2.479024,
+      0.157292
+    ],
+    [
+      2.946103,
+      0.399794
+    ],
+    [
+      3.67553,
+      0.60832
+    ],
+    [
+      5.0,
+      0.600123
+    ],
+    [
+      6.32447,
+      0.60832
+    ],
+    [
+      7.053897,
+      0.399794
+    ],
+    [
+      7.520976,
+      0.157292
+    ],
+    [
+      7.938455,
+      -0.016331
+    ],
+    [
+      8.49586,
+      -0.061971
+    ],
+    [
+      9.209567,
+      -0.04651
+    ],
+    [
+      10.0,
+      0.0
+    ]
+  ]
+}

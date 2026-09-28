@@ -1,0 +1,101 @@
+# 避障軌跡規劃：所有實驗的參數
+#   slide      對應簡報頁數（有 slide 的實驗會和簡報圖做數值比對）
+#   suggested  本專案建議的額外實驗，非簡報內容
+#   set        以「區塊.參數」覆寫該組的 defaults；指令列也可以用 --set 區塊.參數=值
+
+groups:
+  A:
+    name: DecompROS + OSQP（走廊硬約束）
+    title: DecompROS-like Auto Safe Corridor Generation + OSQP
+    type: corridor_qp
+    defaults:
+      N: 15
+      walls: {bottom: [-1.5, 0.3], top: [1.8, 2.5], x_range: [4.0, 6.0], n_x: 15, n_bottom: 15, n_top: 10}
+      corridor: {margin: 0.2, default_bounds: [-2.0, 2.0], search_half_width: 0.5}
+      qp: {w_smooth: 15.0, w_ref: 1.0, smooth_p_scale: 1.0}   # smooth_p_scale=1.0 為原程式行為（見 README §6）
+      osqp: {}                                                  # OSQP 設定，空白 = 預設值
+      plot: {figsize: [10, 5], path_alpha: 0.6}
+
+  B:
+    name: ESDF + L-BFGS（EGO-Planner 軟約束）
+    title: EGO-Planner with True Grid-based ESDF Field
+    type: esdf_lbfgs
+    defaults:
+      N: 15
+      map: {x_min: -0.5, x_max: 10.5, y_min: -1.5, y_max: 2.5, resolution: 0.05, lookup: nearest}
+      walls: {x_range: [4.0, 6.0], channel: [0.3, 0.9]}
+      ego: {d_safe: 0.6, w_smooth: 5.0, w_obs: 200.0, w_ref: 0.5}
+      lbfgs: {}                                                 # scipy L-BFGS-B options，空白 = 預設值
+      plot: {figsize: [10, 5]}
+
+  C:
+    name: ESDF + L-BFGS + 1D OSQP 速度規劃
+    title: EGO-Planner with ESDF Field + 1D OSQP Velocity Optimization
+    type: esdf_velocity
+    defaults:
+      N: 15
+      map: {x_min: -0.5, x_max: 10.5, y_min: -1.5, y_max: 2.5, resolution: 0.05, lookup: nearest}
+      walls: {x_range: [4.0, 6.0], channel: [0.3, 0.9]}
+      ego: {d_safe: 0.6, w_smooth: 50.0, w_obs: 200.0, w_ref: 5.0}   # 簡報未列出，由 slide 27 的軌跡反推
+      lbfgs: {}
+      velocity: {v_target: 1.0, a_max: 0.5, a_lat_max: 0.5, d_safety_margin: 0.6, v_obstacle_limit: 0.5,
+                 w_v: 1.0, w_a: 5.0, enforce_a_max: false}
+      osqp: {}
+      plot: {figsize: [12, 6]}
+
+  D:
+    name: DecompROS + OSQP 軌跡 + 1D OSQP 速度規劃
+    title: DecompROS Corridor + OSQP Path & Velocity Profile Optimization
+    type: corridor_velocity
+    defaults:
+      N: 15
+      walls: {bottom: [-1.5, 0.3], top: [1.8, 2.5], x_range: [4.0, 6.0], n_x: 15, n_bottom: 15, n_top: 10}
+      corridor: {margin: 0.2, default_bounds: [-2.0, 2.0], search_half_width: 0.5}
+      qp: {w_smooth: 15.0, w_ref: 1.0, smooth_p_scale: 1.0}
+      velocity: {v_target: 1.0, a_max: 0.5, a_lat_max: 0.5, v_corridor_limit: 0.5, narrow_width: 2.0,
+                 w_v: 1.0, w_a: 5.0, enforce_a_max: false}
+      osqp: {}
+      plot: {figsize: [12, 6], path_alpha: 0.45}
+
+experiments:
+  # ---- A：DecompROS + OSQP（slide 5~11）----
+  - {id: A1_base,               group: A, slide: 5,  desc: "基準：margin 0.2、N 15、w_smooth 15、w_ref 1"}
+  - {id: A2_default_bounds_0.1, group: A, slide: 6,  desc: "無障礙處的預設走廊縮為 ±0.1 m", set: {corridor.default_bounds: [-0.1, 0.1]}}
+  - {id: A3_margin_0.5,         group: A, slide: 7,  desc: "安全邊距 0.5 m", set: {corridor.margin: 0.5}}
+  - {id: A4_margin_0.8,         group: A, slide: 8,  desc: "安全邊距 0.8 m：走廊為空，OSQP 判定不可行", set: {corridor.margin: 0.8}}
+  - {id: A5_N30,                group: A, slide: 9,  desc: "控制點 30 個", set: {N: 30}}
+  - {id: A6_w_smooth_150,       group: A, slide: 10, desc: "平滑權重 150", set: {qp.w_smooth: 150.0}}
+  - {id: A7_w_ref_100,          group: A, slide: 11, desc: "參考路徑權重 100", set: {qp.w_ref: 100.0}}
+
+  # ---- B：ESDF + L-BFGS（slide 18~23）----
+  - {id: B1_base,        group: B, slide: 18, desc: "基準：d_safe 0.6、w_smooth 5、w_obs 200、w_ref 0.5"}
+  - {id: B2_N30,         group: B, slide: 19, desc: "控制點 30 個", set: {N: 30}}
+  - {id: B3_d_safe_1.5,  group: B, slide: 20, desc: "安全距離 1.5 m", set: {ego.d_safe: 1.5}}
+  - {id: B4_w_smooth_50, group: B, slide: 21, desc: "平滑權重 50", set: {ego.w_smooth: 50.0}}
+  - {id: B5_w_obs_2000,  group: B, slide: 22, desc: "障礙物權重 2000", set: {ego.w_obs: 2000.0}}
+  - {id: B6_w_ref_100,   group: B, slide: 23, desc: "參考路徑權重 100", set: {ego.w_ref: 100.0}}
+
+  # ---- C：ESDF + L-BFGS + 速度規劃（slide 26~28）----
+  - {id: C1_wide_channel, group: C, slide: 26, desc: "通道 y 在 (-0.8, 0.9)，直線即可通過", set: {walls.channel: [-0.8, 0.9]}}
+  - {id: C2_w_a_5,        group: C, slide: 27, desc: "通道 (0.3, 0.9)，w_a 5"}
+  - {id: C3_w_a_0.1,      group: C, slide: 28, desc: "通道 (0.3, 0.9)，w_a 0.1", set: {velocity.w_a: 0.1}}
+
+  # ---- D：DecompROS + 速度規劃（slide 29~31）----
+  - {id: D1_wide_corridor, group: D, slide: 29, desc: "下牆 (-1.5, -0.5)、上牆 (2.2, 3.0)，走廊寬 2.3 m", set: {walls.bottom: [-1.5, -0.5], walls.top: [2.2, 3.0]}}
+  - {id: D2_w_a_5,         group: D, slide: 30, desc: "下牆 (-1.5, 0.3)、上牆 (1.8, 2.5)，w_a 5"}
+  - {id: D3_w_a_0.1,       group: D, slide: 31, desc: "同 D2，w_a 0.1", set: {velocity.w_a: 0.1}}
+
+  # ---- S：建議實驗（非簡報內容）----
+  - {id: S1_corridor_w_a_0.1_amax, group: D, suggested: true, desc: "D3 + 加入 |a| <= a_max 硬約束", set: {velocity.w_a: 0.1, velocity.enforce_a_max: true}}
+  - {id: S2_esdf_w_a_0.1_amax,     group: C, suggested: true, desc: "C3 + 加入 |a| <= a_max 硬約束", set: {velocity.w_a: 0.1, velocity.enforce_a_max: true}}
+  - {id: S3_bilinear_B1, group: B, suggested: true, desc: "B1 改用雙線性 ESDF 查詢", set: {map.lookup: bilinear}}
+  - {id: S4_bilinear_B2, group: B, suggested: true, desc: "B2 改用雙線性 ESDF 查詢", set: {map.lookup: bilinear, N: 30}}
+  - {id: S5_bilinear_B3, group: B, suggested: true, desc: "B3 改用雙線性 ESDF 查詢", set: {map.lookup: bilinear, ego.d_safe: 1.5}}
+  - {id: S6_bilinear_B4, group: B, suggested: true, desc: "B4 改用雙線性 ESDF 查詢", set: {map.lookup: bilinear, ego.w_smooth: 50.0}}
+  - {id: S7_bilinear_B5, group: B, suggested: true, desc: "B5 改用雙線性 ESDF 查詢", set: {map.lookup: bilinear, ego.w_obs: 2000.0}}
+  - {id: S8_bilinear_B6, group: B, suggested: true, desc: "B6 改用雙線性 ESDF 查詢", set: {map.lookup: bilinear, ego.w_ref: 100.0}}
+  # 同場景對照：簡報中兩種方法用的是不同的牆（A/D 通道寬 1.5 m、B/C 通道寬 0.6 m），這兩組交換場景
+  - {id: S9_decomp_narrow_channel, group: A, suggested: true, desc: "DecompROS 走 B 組的窄通道（上牆 0.9~2.5）", set: {walls.top: [0.9, 2.5]}}
+  - {id: S10_esdf_wide_gap,        group: B, suggested: true, desc: "ESDF 走 A 組的寬通道（通道 0.3~1.8）", set: {walls.channel: [0.3, 1.8]}}
+  # B6 的碰撞能否靠提高 w_obs 解決（雙線性查詢）：控制點安全，但線段仍切到牆角
+  - {id: S11_bilinear_B6_w_obs_2000, group: B, suggested: true, desc: "S8 + w_obs 2000", set: {map.lookup: bilinear, ego.w_ref: 100.0, ego.w_obs: 2000.0}}
